@@ -163,7 +163,7 @@ struct image_data *read_image(const char *filename, char **error) {
 
     struct image_data *image_data = calloc(sizeof(struct image_data) + width * abs(height), 1);
 	image_data->width = width;
-	image_data->height = height;
+	image_data->height = -height;
 
     // reorder data from ARGB to RGBA
     if (height < 0) {
